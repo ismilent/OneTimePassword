@@ -20,6 +20,6 @@ def OneTimePassword(secret, intervals_no):
 test_key = 'GEZDGNBVGY3TQOJQ'
 if __name__ == '__main__':
     epochSeconds = int(time.time())
-    pwd = OneTimePassword(test_key, epochSeconds/60)
-    secondRemaining = 60 - (epochSeconds % 60)
+    pwd = OneTimePassword(test_key, epochSeconds/30)
+    secondRemaining = 30 - (epochSeconds % 30)
     print '%06d (%d second(s) remaining)' % (pwd, secondRemaining)
